@@ -104,7 +104,7 @@ export default {
      return str.replace(/(^\s*)|(\s*$)/g, '').replace(/&nbsp;/g, '')
  }
  
- main(url)
+//  main(url)
   }
 };
 </script>>

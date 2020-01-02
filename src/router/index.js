@@ -22,12 +22,12 @@ const routes = [
       {
         path: "/child1",
         name: "child",
-        component: () => import('./childrenfirst.vue')
+        component: () => import('@/views/router/childrenfirst.vue')
       },
       {
         path: "/child2",
         name: "child",
-        component: () => import('./childrensen.vue')
+        component: () => import('@/views/router/childrensen.vue')
       },
       
     ]
