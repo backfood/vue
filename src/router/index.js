@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import Rotate from "../views/rotate/rotate.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -31,7 +31,18 @@ const routes = [
       },
       
     ]
-  },
+  },{
+    path:"/scroll",
+    name:"scroll",
+    component:()=>import('@/views/better-scroll/scroll.vue'),
+    children:[
+      {
+        path:"/rotate",
+        name:"rotate",
+        component:Rotate
+      }
+    ]
+  }
 
 ]
 

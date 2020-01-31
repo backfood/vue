@@ -22,7 +22,6 @@ export default {
       下一步是尝试在一个mutation/action中调用另一个mutation/action
       
       */
-      
   },
   computed:{
     ...mapState(['id','name'])
