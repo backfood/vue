@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Rotate from "../views/rotate/rotate.vue"
+import Notes from "@/views/notes/index.vue"
+import Http from "@/views/notes/http.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -9,7 +11,7 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-   
+
   },
   {
     path: '/about',
@@ -29,18 +31,28 @@ const routes = [
         name: "child",
         component: () => import('@/views/router/childrensen.vue')
       },
-      
+
     ]
-  },{
-    path:"/scroll",
-    name:"scroll",
-    component:()=>import('@/views/better-scroll/scroll.vue'),
-    children:[
+  },
+  {
+    path: "/scroll",
+    name: "scroll",
+    component: () => import('@/views/better-scroll/scroll.vue'),
+    children: [
       {
-        path:"/rotate",
-        name:"rotate",
-        component:Rotate
+        path: "/rotate",
+        name: "rotate",
+        component: Rotate
       }
+    ]
+  },
+  {
+    path: "/notes",
+    name: "notes",
+    component: Notes,
+    children:[
+      {path:"/http",
+    component:Http}
     ]
   }
 

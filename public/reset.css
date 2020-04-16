@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img
+	{margin:0;
+	padding:0;
+	}
+	
+
+body,html{
+	height:100%;
+	width:100%;
+	font:.12rem "微软雅黑",Arial;
+	letter-spacing:.01rem;
+	}
+a{
+	text-decoration:none;
+	color:#999999;}
+li{
+	list-style:none;}
+i,em{
+	font-style:normal;}
+h1,h2,h3,h4,h5,h6,b,strong{
+	font-weight:normal;
+	font-size:100%;}
+input{
+	outline:none;}
+/* .Collective{
+	width:1140px;
+	margin:0 auto;} */
+.clearfix:after{
+	content:" ";
+	display:block;
+	clear:both;
+	height:0px;}

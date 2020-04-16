@@ -1,7 +1,11 @@
 <template>
   <div class="home">
-    <div class="static">1</div>
-    <div class="float">1</div>
+    <div class="static">
+      <vue-button></vue-button>
+    </div>
+    <div class="float">
+      <Sonvue title="bioati"></Sonvue>
+    </div>
     <!-- <div class="home-header"></div>
     <div class="home-body"></div>
     <div class="home-footer"></div> -->
@@ -13,11 +17,13 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
-
+import Sonvue from '@/components/sonvue.vue'
+// console.log(Sonvue)
 export default {
   name: "home",
   components: {
-    // HelloWorld
+    // HelloWorld,
+    Sonvue
   },
   created() {}
 };
