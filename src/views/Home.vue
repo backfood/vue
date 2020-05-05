@@ -4,7 +4,7 @@
       <vue-button></vue-button>
     </div>
     <div class="float">
-      <Sonvue title="bioati"></Sonvue>
+      <Sonvue title="bioati" @sonemit="tiger"></Sonvue>
     </div>
     <!-- <div class="home-header"></div>
     <div class="home-body"></div>
@@ -24,6 +24,11 @@ export default {
   components: {
     // HelloWorld,
     Sonvue
+  },
+  methods:{
+    tiger(data){
+      console.log(data)
+    }
   },
   created() {}
 };

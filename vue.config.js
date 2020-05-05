@@ -9,7 +9,6 @@ module.exports = {
             .set('@', resolve('src'))
     },
     devServer: { // 开发环境下runtime
-       
         proxy: { // 代理服务器
             // 接口地址为 http://127.0.0.1:7001/api/register
             '/11999': {
@@ -19,6 +18,11 @@ module.exports = {
             },
             "/book":{
                 target: 'http://localhost:8080',
+                secure: false, 
+                changeOrigin: true
+            },
+            "^/examples":{
+                target:'https://www.echartsjs.com',
                 secure: false, 
                 changeOrigin: true
             }

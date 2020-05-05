@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Rotate from "../views/rotate/rotate.vue"
 import Notes from "@/views/notes/index.vue"
 import Http from "@/views/notes/http.vue"
+import Echarts from "@/views/notes/echarts.vue"
+import Qimen  from "@/views/notes/qimen.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -50,9 +52,18 @@ const routes = [
     path: "/notes",
     name: "notes",
     component: Notes,
-    children:[
-      {path:"/http",
-    component:Http}
+    children: [
+      {
+        path: "/http",
+        component: Http
+      },
+      {
+        path: "/echarts",
+        component: Echarts
+      },{
+        path:"/qimen",
+        component:Qimen
+      }
     ]
   }
 

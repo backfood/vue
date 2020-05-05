@@ -11,6 +11,7 @@
               底部
           </tfoot>
       </table>
+      <button @click="click"></button>
   </div>
 </template>
 
@@ -22,7 +23,12 @@ export default {
             type:String
         }
     },
-    name:"Sonvue"
+    name:"Sonvue",
+    methods:{
+        click(){
+            this.$emit("sonemit","from son data")
+        }
+    }
 }
 </script>
 
