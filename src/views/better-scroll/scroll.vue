@@ -4,6 +4,7 @@
     <div class="wrapper" ref="wrapper">
       <div class="content">
         <router-link to="/rotate">旋转</router-link>
+        <router-link to="/swiper">swiper</router-link>
         <router-view class="roate"/>
       </div>
     </div>

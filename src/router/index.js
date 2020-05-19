@@ -2,13 +2,14 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Rotate from "../views/rotate/rotate.vue"
+import Swiper from "../views/rotate/swiper/swiper.vue"
 import Notes from "@/views/notes/index.vue"
 import Http from "@/views/notes/http.vue"
 import Echarts from "@/views/notes/echarts.vue"
 import Qimen  from "@/views/notes/qimen.vue"
 Vue.use(VueRouter)
 
-const routes = [
+let routes = [
   {
     path: '/',
     name: 'home',
@@ -45,6 +46,10 @@ const routes = [
         path: "/rotate",
         name: "rotate",
         component: Rotate
+      },{
+        path: "/swiper",
+        name: "swiper",
+        component: Swiper
       }
     ]
   },

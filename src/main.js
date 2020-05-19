@@ -7,12 +7,19 @@ import axios from "axios"
 Vue.prototype.$axios=axios
 Vue.prototype.$echarts = echarts
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import style
+import 'swiper/css/swiper.css'
+Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
+
 Vue.component("vue-button",{
   data:()=>{
   return {}
   },
   template:"<button>按钮</button>"
 })
+
+import './mock'
 
 Vue.config.productionTip = false
 

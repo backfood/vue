@@ -16,6 +16,10 @@ export default {
       ...mapActions(['acId']),
       chanid(){
         this.acId('魏征')
+        let that=this
+        setTimeout(()=>{
+          that.$router.push('/notes')
+        },1000)
       }
       /*
       现在已经完成了mutation和action的基本使用
