@@ -28,6 +28,9 @@ export default {
         click(){
             this.$emit("sonemit","from son data")
         }
+    },
+    created(){
+        console.log(this.title)
     }
 }
 </script>

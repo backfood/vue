@@ -4,7 +4,7 @@
       <vue-button></vue-button>
     </div>
     <div class="float">
-      <Sonvue title="bioati" @sonemit="tiger"></Sonvue>
+      <Sonvue title="标题" @sonemit="tiger"></Sonvue>
     </div>
     <!-- <div class="home-header"></div>
     <div class="home-body"></div>

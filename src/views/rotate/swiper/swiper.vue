@@ -8,7 +8,7 @@
       
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    
+
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
     // console.log("Current Swiper instance object", this.swiper);
     this.swiper.slideTo(3, 1000, false);
     axios.get('/mode2').then(res=>{
-      console.log(res)
+      console.log(res.data)
     })
   }
 };

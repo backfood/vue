@@ -11,6 +11,7 @@
 <script>
 import {mapActions,mapState} from "vuex"
 export default {
+  
   name:"childrenfirst",
   methods:{
       ...mapActions(['acId']),
@@ -29,6 +30,9 @@ export default {
   },
   computed:{
     ...mapState(['id','name'])
+  },
+  created(){
+    console.log(this.$props)
   }
 }
 </script>
