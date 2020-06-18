@@ -7,6 +7,7 @@ import Notes from "@/views/notes/index.vue"
 import Http from "@/views/notes/http.vue"
 import Echarts from "@/views/notes/echarts.vue"
 import Qimen  from "@/views/notes/qimen.vue"
+import elementui from "@/views/elementui/index.vue"
 Vue.use(VueRouter)
 
 let routes = [
@@ -70,6 +71,16 @@ let routes = [
         component:Qimen
       }
     ]
+  },
+  {
+    path:"/elementui",
+    name:"elementui",
+    component:elementui,
+    children:[{
+      path:"/eledialog",
+      name:"eledialog",
+      component:()=>import("@/views/elementui/eledialog.vue")
+    }]
   }
 
 ]
