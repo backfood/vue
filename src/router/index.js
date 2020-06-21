@@ -70,6 +70,10 @@ let routes = [
         component:Qimen
       }
     ]
+  },{
+    path:"/video",
+    name:"video",
+    component:()=>import("@/views/video")
   }
 
 ]
