@@ -6,6 +6,9 @@
     <div class="float">
       <Sonvue title="bioati" @sonemit="tiger"></Sonvue>
     </div>
+    <div>
+      <button @click="axiosx">axios</button>
+    </div>
     <!-- <div class="home-header"></div>
     <div class="home-body"></div>
     <div class="home-footer"></div> -->
@@ -28,6 +31,12 @@ export default {
   methods:{
     tiger(data){
       console.log(data)
+    },
+    axiosx(){
+      console.log('res')
+      this.$axios.get("/h5vue").then(res=>{
+        console.log(res)
+      })
     }
   },
   created() {}
