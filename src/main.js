@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import echarts from 'echarts'
-import axios from "axios"
+import axios from "./axios"
 Vue.prototype.$axios=axios
 Vue.prototype.$echarts = echarts
 

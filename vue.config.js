@@ -17,14 +17,25 @@ module.exports = {
                 changeOrigin: true
             },
             "/book":{
-                target: 'http://localhost:8080',
+                target: 'http://localhost:8082',
                 secure: false, 
-                changeOrigin: true
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/book': ''
+                  }
             },
             "^/examples":{
                 target:'https://www.echartsjs.com',
                 secure: false, 
                 changeOrigin: true
+            },
+            "/h5run":{
+                target: 'http://localhost:6000',
+                secure: false, 
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/h5run': ''
+                  }
             }
         }
     },

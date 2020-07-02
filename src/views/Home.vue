@@ -1,10 +1,17 @@
 <template>
   <div class="home">
     <div class="static">
-      <vue-button></vue-button>
+      <vue-button @click="axiosx"></vue-button>
     </div>
     <div class="float">
       <Sonvue title="bioati" @sonemit="tiger"></Sonvue>
+    </div>
+    
+    <div>
+      {{res}}
+    </div>
+    <div>
+      <button  @click="axiosx">axiosx</button>
     </div>
     <!-- <div class="home-header"></div>
     <div class="home-body"></div>
@@ -21,6 +28,9 @@ import Sonvue from '@/components/sonvue.vue'
 // console.log(Sonvue)
 export default {
   name: "home",
+  data(){
+   return({ res:"这是默认的未返回的状态"})
+  },
   components: {
     // HelloWorld,
     Sonvue
@@ -28,6 +38,13 @@ export default {
   methods:{
     tiger(data){
       console.log(data)
+    },
+    axiosx(){
+      console.log("res")
+      this.$axios.get("/h5run","123很好").then((res)=>{
+        console.log(res.data)
+        this.res=res.data
+      })
     }
   },
   created() {}
