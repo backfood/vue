@@ -2,7 +2,7 @@ const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
-  
+    mode:"development",
     runtimeCompiler: true,
     chainWebpack: config => {
         config.resolve.alias
@@ -16,17 +16,27 @@ module.exports = {
                 secure: false, //是否使用 Https安全传输协议
                 changeOrigin: true
             },
-            "/book":{
-                target: 'http://localhost:8082',
-                secure: false, 
+
+            "/book": {
+                target: 'http://localhost:9000',
+                secure: false,
                 changeOrigin: true,
-                pathRewrite: {
-                    '^/book': ''
-                  }
+                pathRewrite:{
+                    "^/book":""
+                }
             },
-            "^/examples":{
-                target:'https://www.echartsjs.com',
-                secure: false, 
+             "/h5vue": {
+                target: 'http://localhost:9001',
+                secure: false,
+                changeOrigin: true,
+                pathRewrite:{
+                    "^/h5vue":""
+                }
+
+            },
+            "^/examples": {
+                target: 'https://www.echartsjs.com',
+                secure: false,
                 changeOrigin: true
             },
             "/h5run":{
@@ -39,7 +49,7 @@ module.exports = {
             }
         }
     },
- 
-   
+
+
 
 }

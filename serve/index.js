@@ -1,16 +1,14 @@
-const express =require("express")
 
+const express = require("express");
+const app9000 = express()
 
-const app =express()
-const app2=express()
+app9000.get('/h5vue', (req, res) => {
+    console.log(req);
+    res.send("这是9000的响应")
+})
 
-app.get('/h5run',(req,res)=>{
-    res.send("这是响应")
+app9000.listen("9000", (res) => {
+    console.log(res, "9000启动")
 })
 
 
-
-
-app.listen("8082",(res)=>{
-    console.log(res)
-})

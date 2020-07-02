@@ -7,9 +7,11 @@
       <Sonvue title="bioati" @sonemit="tiger"></Sonvue>
     </div>
 
+
     <div>{{res}}</div>
     <div>
       <button @click="axiosx">axiosx</button>
+
     </div>
     <!-- <div class="home-header"></div>
     <div class="home-body"></div>
@@ -33,6 +35,7 @@ export default {
     // HelloWorld,
     Sonvue
   },
+<<<<<<< HEAD
   methods: {
     tiger(data) {
       console.log(data);
@@ -77,6 +80,17 @@ export default {
         });
         this.showVerifyDialog = false;
       }
+=======
+  methods:{
+    tiger(data){
+      console.log(data)
+    },
+    axiosx(){
+      console.log('res')
+      this.$axios.get("/h5vue").then(res=>{
+        console.log(res)
+      })
+>>>>>>> 4008870c549f0495a5e782af8dacb5d3c795e7c9
     }
   },
   created() {}
