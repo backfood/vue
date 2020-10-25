@@ -7,20 +7,21 @@ import Notes from "@/views/notes/index.vue"
 import Http from "@/views/notes/http.vue"
 import Echarts from "@/views/notes/echarts.vue"
 import Qimen  from "@/views/notes/qimen.vue"
-import orderDetails from "@/views/order-recode-m"
+import orderDetails from "@/views/w-order-recode-m"
+import withdrawManger from "@/views/w-withdraw-manger"
 Vue.use(VueRouter)
 
 let routes = [
   {
     path: '/',
     name: 'home',
-    component: orderDetails,
+    component: withdrawManger,
 
   },
   {
     path:"/order-details/:id",
     name:"order-details",
-    component:()=>import("@/views/order-recode-m/order-details.vue")
+    component:()=>import("@/views/w-order-recode-m/order-details.vue")
   },
   {
     path: '/about',
