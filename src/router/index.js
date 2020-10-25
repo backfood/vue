@@ -10,14 +10,20 @@ import Qimen  from "@/views/notes/qimen.vue"
 import orderDetails from "@/views/w-order-recode-m"
 import withdrawManger from "@/views/w-withdraw-manger"
 import classification from "@/views/w-classification"
+import goodsList from "@/views/w-goods-list"
 Vue.use(VueRouter)
 
 let routes = [
   {
     path: '/',
     name: 'home',
-    component: classification,
+    component: goodsList,
 
+  },
+  {
+    path:"/goods-list/:id",
+    name:"goods-list",
+    component:()=>import("@/views/w-goods-list/edit-and-reset.vue")
   },
   {
     path:"/order-details/:id",
