@@ -7,13 +7,14 @@ import Notes from "@/views/notes/index.vue"
 import Http from "@/views/notes/http.vue"
 import Echarts from "@/views/notes/echarts.vue"
 import Qimen  from "@/views/notes/qimen.vue"
+import orderDetails from "@/views/order-recode-m"
 Vue.use(VueRouter)
 
 let routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    component: orderDetails,
 
   },
   {

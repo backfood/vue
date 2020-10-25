@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "dev-build": "vue-cli-service build --mode development",
     "commit": "git-cz",
@@ -14,7 +14,9 @@
     "better-scroll": "^1.15.2",
     "cheerio": "^1.0.0-rc.3",
     "core-js": "^3.4.3",
+    "dayjs": "^1.9.4",
     "echarts": "^4.7.0",
+    "element-ui": "^2.13.2",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "iconv-lite": "^0.5.0",

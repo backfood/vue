@@ -35,52 +35,6 @@ export default {
     // HelloWorld,
     Sonvue
   },
-<<<<<<< HEAD
-  methods: {
-    tiger(data) {
-      console.log(data);
-    },
-    axiosx() {
-      console.log("res");
-      this.$axios.get("/h5run", "123很好").then(res => {
-        console.log(res.data);
-        this.res = res.data;
-      });
-    },
-    confirmVerifyResult() {
-      if (this.submitMsg.status === "") {
-        this.$message({
-          message: "请输选择审核结果",
-          type: "warning"
-        });
-      } else if (
-        this.submitMsg.status === "REJECTED" &&
-        this.submitMsg.rejectedReason === ""
-      ) {
-        this.$message({
-          message: "请输入审核失败的原因",
-          type: "warning"
-        });
-      } else {
-        submitVerify(this.submitMsg).then(res => {
-          if (res.status == 200) {
-            this.$message({
-              message: "提交成功",
-              type: "success"
-            });
-          }
-          let param = this.checkNull({
-            submittedStartAt: this.submittime ? this.submittime[0] : null,
-            submittedEndAt: this.submittime ? this.submittime[1] : null,
-            auditStartAt: this.verifytime ? this.verifytime[0] : null,
-            auditEndAt: this.verifytime ? this.verifytime[1] : null,
-            ...this.searchParam
-          });
-          this.init(param);
-        });
-        this.showVerifyDialog = false;
-      }
-=======
   methods:{
     tiger(data){
       console.log(data)
@@ -90,7 +44,6 @@ export default {
       this.$axios.get("/h5vue").then(res=>{
         console.log(res)
       })
->>>>>>> 4008870c549f0495a5e782af8dacb5d3c795e7c9
     }
   },
   created() {}
