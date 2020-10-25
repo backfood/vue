@@ -3,16 +3,6 @@
     <el-row>
       <el-col :span="24">
         <el-form :inline="true" ref="logSearch" :model="form">
-          <el-form-item label="时间">
-            <el-date-picker
-              v-model="date"
-              type="datetimerange"
-              value-format="yyyy-MM-dd"
-              range-separator="至"
-              start-placeholder="开始日期"
-              end-placeholder="结束日期"
-            ></el-date-picker>
-          </el-form-item>
           <el-form-item label="手机号">
             <el-input v-model="form.userId" placeholder="请输入"></el-input>
           </el-form-item>
@@ -51,7 +41,7 @@
           ></el-table-column>
           <el-table-column
             prop="coinSymbol"
-            label="提现金额"
+            label="贡献奖"
             align="center"
           ></el-table-column>
           <el-table-column
