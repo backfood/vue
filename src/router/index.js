@@ -9,13 +9,14 @@ import Echarts from "@/views/notes/echarts.vue"
 import Qimen  from "@/views/notes/qimen.vue"
 import orderDetails from "@/views/w-order-recode-m"
 import withdrawManger from "@/views/w-withdraw-manger"
+import classification from "@/views/w-classification"
 Vue.use(VueRouter)
 
 let routes = [
   {
     path: '/',
     name: 'home',
-    component: withdrawManger,
+    component: classification,
 
   },
   {
