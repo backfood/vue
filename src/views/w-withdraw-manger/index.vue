@@ -146,6 +146,7 @@
       </span>
     </el-dialog> <el-dialog title="转账提示" :visible.sync="dialogOption" width="30%">
       <div>
+        <p>备注: 转账成功时请留空; 转账失败时填写失败说明</p>
        <el-input v-model="tips" placeholder="请输入内容"></el-input>
       </div>
       <span slot="footer" class="dialog-footer">
