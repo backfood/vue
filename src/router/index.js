@@ -17,7 +17,7 @@ let routes = [
   {
     path: '/',
     name: 'home',
-    component: goodsList,
+    component: classification,
 
   },
   {
