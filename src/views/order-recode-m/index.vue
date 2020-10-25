@@ -137,11 +137,11 @@ export default {
           account: "2",
         },
         {
-          userId: "1",
+          userId: "3",
           account: "2",
         },
         {
-          userId: "1",
+          userId: "10",
           account: "2",
         },
       ],
@@ -174,7 +174,10 @@ export default {
       this.date = [];
     },
     viewin(e) {
-      console.log(e);
+      this.$router.push({
+        path: `/order-details/${e.userId}`,
+      })
+
     },
     handleCurrentChange(v) {
       this.param.page = v;

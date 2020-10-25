@@ -18,6 +18,11 @@ let routes = [
 
   },
   {
+    path:"/order-details/:id",
+    name:"order-details",
+    component:()=>import("@/views/order-recode-m/order-details.vue")
+  },
+  {
     path: '/about',
     name: 'about',
     // route level code-splitting
