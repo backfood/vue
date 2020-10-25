@@ -3,19 +3,22 @@
     <el-row>
       <el-col :span="24">
         <el-form :inline="true" ref="logSearch" :model="form">
-          <el-form-item label="用户ID">
+          <el-form-item label="购买人">
             <el-input v-model="form.userId" placeholder="请输入"></el-input>
           </el-form-item>
-          <el-form-item label="账号">
+          <el-form-item label="订单号">
             <el-input v-model="form.account" placeholder="请输入"></el-input>
           </el-form-item>
-          <el-form-item label="币种">
+          <el-form-item label="邀请人">
+            <el-input v-model="form.account" placeholder="请输入"></el-input>
+          </el-form-item>
+          <el-form-item label="类型">
             <el-select clearable v-model="form.coinId" placeholder="请选择">
               <el-option
-                :key="e.id"
-                :label="e.coinSymbol"
-                v-for="e of coins"
-                :value="e.id"
+                :key="key"
+                :label="key"
+                v-for="(key, value) of type"
+                :value="value"
               ></el-option>
             </el-select>
           </el-form-item>
@@ -145,7 +148,11 @@ export default {
           account: "2",
         },
       ],
-      coins: [],
+
+      type: {
+        new: "新购",
+        old: "复购",
+      },
     };
   },
 
@@ -176,8 +183,7 @@ export default {
     viewin(e) {
       this.$router.push({
         path: `/order-details/${e.userId}`,
-      })
-
+      });
     },
     handleCurrentChange(v) {
       this.param.page = v;
